@@ -1,0 +1,16 @@
+Complete Blood Count
+
+Hemoglobin: 8.2 g/dL
+Reference Range: 12-16 g/dL
+
+RBC: 3.6 x10^6/uL
+Reference Range: 4.2-5.4 x10^6/uL
+
+MCV: 72 fL
+Reference Range: 80-100 fL
+
+WBC: 7.2 x10^3/uL
+Reference Range: 4-11 x10^3/uL
+
+Platelets: 250 x10^3/uL
+Reference Range: 150-450 x10^3/uL

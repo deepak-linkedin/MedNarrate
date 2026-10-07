@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: mednarrate-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: false
+      - key: AUTO_CREATE_TABLES
+        value: true
+      - key: PERSIST_RESULTS
+        value: true
+      - key: COOKIE_SECURE
+        value: true
+      - key: COOKIE_SAMESITE
+        value: none
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: ONLINE_RAG_ENABLED
+        value: true
+      - key: WEB_SEARCH_PROVIDER
+        value: tavily
+      - key: OCR_ENABLED
+        value: true
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
